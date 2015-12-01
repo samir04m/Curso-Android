@@ -1,5 +1,6 @@
 package co.edu.unimagdalena.mellanie;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -48,8 +49,13 @@ public class MainActivity extends AppCompatActivity {
                 titulolbl.setText("Facebok Error");
             }
         });
-
-
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+    }
+
+
 
 }
